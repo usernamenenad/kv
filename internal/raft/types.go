@@ -10,19 +10,19 @@ const (
 )
 
 type VoteRequestData struct {
-	CurrentTerm Term
-	LastTerm    Term
-	LogLength   int
+	Term      Term
+	LastTerm  Term
+	LogLength int
 }
 
 type VoteResponseData struct {
 	VoterId     NodeId
-	CurrentTerm Term
+	Term        Term
 	VoteGranted bool
 }
 
 type LogRequest struct {
-	CurrentTerm  Term
+	Term         Term
 	PrefixLen    int
 	PrefixTerm   Term
 	CommitLength int
@@ -30,7 +30,7 @@ type LogRequest struct {
 }
 
 type LogResponse struct {
-	CurrentTerm Term
-	Ack         int
-	Success     bool
+	Term    Term
+	Ack     int
+	Success bool
 }
